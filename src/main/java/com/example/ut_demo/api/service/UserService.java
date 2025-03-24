@@ -14,4 +14,9 @@ public class UserService {
     public User getUser(int id) {
         return userMapper.findById(id);
     }
+
+    public User createUser(User user) {
+        userMapper.insert(user);
+        return user;
+    }
 }
